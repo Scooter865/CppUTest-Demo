@@ -3,9 +3,9 @@ FROM ubuntu:24.04
 
 # Copy CppUTest-Demo into image
 RUN mkdir /CppUTest-Demo
+RUN mkdir /CppUTest-Demo/build
 COPY src /CppUTest-Demo/src
 COPY include /CppUTest-Demo/include
-COPY build /CppUTest-Demo/build
 COPY tests /CppUTest-Demo/tests
 COPY main.c /CppUTest-Demo/main.c
 COPY Makefile /CppUTest-Demo/Makefile

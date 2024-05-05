@@ -31,7 +31,7 @@ $(OBJECTS) : $(BUILD_DIR)/%.o : $(SRC_DIR)/%.c
 # Remove compiled object files
 .PHONY: clean
 clean:
-	rm -f $(wildcard $(BUILD_DIR)/*.o)
+	rm -rf $(BUILD_DIR)
 	rm -f $(NAME)
 
 
