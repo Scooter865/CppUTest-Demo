@@ -22,6 +22,7 @@ $(NAME): $(BUILD_DIR)/main.o $(OBJECTS)
 	$(CC) $^ -o $@
 
 $(BUILD_DIR)/main.o: $(MAIN_SRC)
+	mkdir $(BUILD_DIR)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Build components
