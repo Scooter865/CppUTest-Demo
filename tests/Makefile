@@ -3,9 +3,9 @@ MAKEFILE_DIR=$(dir $(realpath $(firstword $(MAKEFILE_LIST))))
 PROJECT_DIR=$(realpath $(MAKEFILE_DIR)..)
 TEST_DIR=$(PROJECT_DIR)/tests
 
-
-# CPPUTEST_HOME=$(TEST_DIR)/cpputest
-# I set this globally
+# Specifies path if running in docker container or if CppUTest was installed with this project
+# CppUTest will use the global CPPUTEST_HOME if it was installed
+CPPUTEST_HOME?=$(PROJECT_DIR)/tools/cpputest
 
 # project source files path
 SRC_DIRS=$(PROJECT_DIR)/src

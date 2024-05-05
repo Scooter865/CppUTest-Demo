@@ -36,11 +36,11 @@ clean:
 
 
 # Run tests
-.PHONY: test
-test:
+.PHONY: tests
+tests:
 	make -C $(TEST_DIR)
 	
 # Clean tests
-.PHONY: test_clean
-test_clean:
+.PHONY: tests_clean
+tests_clean:
 	make -C $(TEST_DIR) clean
