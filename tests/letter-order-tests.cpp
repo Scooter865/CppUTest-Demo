@@ -9,7 +9,6 @@ extern "C" {
 TEST_GROUP(Happy_Path_Tests) {
     /* Test variables can be scoped to the file, group, test */
     const char* out_of_order_str = "ababab";
-    const char* in_order_str = "aaabbb";
 
     void setup() {
         /* Setup code to run before each TEST */
@@ -21,7 +20,11 @@ TEST_GROUP(Happy_Path_Tests) {
 };
 
 TEST(Happy_Path_Tests, in_order) {
-   CHECK_EQUAL(1, letters_in_order(in_order_str));
+    const char* in_order_str = "aaabbbccc";
+
+    int ans = letters_in_order(in_order_str);
+
+    CHECK_EQUAL(1, ans);
 }
 
 TEST(Happy_Path_Tests, out_of_order) {
